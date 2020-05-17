@@ -19,6 +19,7 @@ module.exports = {
     'no-plusplus': 'off',
     'no-mixed-operators': 'off',
     'no-param-reassign': 'off',
-    'no-return-assign': 'off'
+    'no-return-assign': 'off',
+    'func-names': 'off',
   },
 };
