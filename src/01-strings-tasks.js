@@ -213,7 +213,7 @@ function getRectangleString(width, height) {
     const row = new Array(rowWidth);
     return row.fill(str).join('');
   };
-  for (let i = 0; i < height; i++) {
+  for (let i = 0; i < height; i += 1) {
     if (i === 0) {
       result += `┌${createRow(width - 2, '─')}┐`;
     } else
@@ -247,12 +247,12 @@ function getRectangleString(width, height) {
 function encodeToRot13(str) {
   const alphabeticLength = 26;
   let result = '';
-  for (let i = 0; i < str.length; i++) {
+  for (let i = 0; i < str.length; i += 1) {
     if (/[a-z]/.test(str.charAt(i))) {
-      result += String.fromCharCode((str.charCodeAt(i) - 97 + 13) % alphabeticLength + 97);
+      result += String.fromCharCode(((str.charCodeAt(i) - 97 + 13) % alphabeticLength) + 97);
     } else
     if (/[A-Z]/.test(str.charAt(i))) {
-      result += String.fromCharCode((str.charCodeAt(i) - 65 + 13) % alphabeticLength + 65);
+      result += String.fromCharCode(((str.charCodeAt(i) - 65 + 13) % alphabeticLength) + 65);
     } else result += str.charAt(i);
   }
   return result;

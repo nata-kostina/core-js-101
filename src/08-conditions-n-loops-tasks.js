@@ -191,11 +191,11 @@ function isInsideCircle(circle, point) {
 function findFirstSingleChar(str) {
   let count = 0;
   let index = 0;
-  for (let i = 0; i < str.length; i++) {
+  for (let i = 0; i < str.length; i += 1) {
     count = 0;
-    for (let j = 0; j < str.length; j++) {
+    for (let j = 0; j < str.length; j += 1) {
       if (i !== j && str.charAt(i) === str.charAt(j)) {
-        count++;
+        count += 1;
         break;
       }
     }
@@ -417,11 +417,11 @@ function getMatrixProduct(A, B) {
   const rowsB = B.length;
   const colsB = B[0].length;
   const C = [];
-  for (let i = 0; i < rowsA; i++) C[i] = [];
-  for (let k = 0; k < colsB; k++) {
-    for (let i = 0; i < rowsA; i++) {
+  for (let i = 0; i < rowsA; i += 1) C[i] = [];
+  for (let k = 0; k < colsB; k += 1) {
+    for (let i = 0; i < rowsA; i += 1) {
       let t = 0;
-      for (let j = 0; j < rowsB; j++) {
+      for (let j = 0; j < rowsB; j += 1) {
         if (A[i][j] === undefined || B[j][k] === undefined) return 0;
         t += A[i][j] * B[j][k];
       }
