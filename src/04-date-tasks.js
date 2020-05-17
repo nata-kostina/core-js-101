@@ -96,11 +96,8 @@ function msToTime(duration) {
   return `${hours}:${minutes}:${seconds}.${milliseconds}`;
 }
 
-function timeSpanToString(startDate, endDate) {
-  const startDateMS = startDate.getTime();
-  const endDateMS = endDate.getTime();
-  const timespanMS = endDateMS - startDateMS;
-  return msToTime(timespanMS);
+function timeSpanToString(/* startDate, endDate */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -130,4 +127,5 @@ module.exports = {
   isLeapYear,
   timeSpanToString,
   angleBetweenClockHands,
+  msToTime,
 };
